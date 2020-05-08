@@ -1,0 +1,57 @@
+body {
+	background-color: hsl(100, 0%, 0%);
+	color: hsl(100, 100%, 100%);
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+	width: 25%;
+}
+.pannel ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+ul li div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.pannel ul li {
+	position: relative;
+}
+.pannel {
+	margin: 10%;
+}
+.pannel .frontal {
+	position: absolute;
+}
+.pannel .back {
+	transform: rotateY(90deg);
+}
+.pannel li:hover div.back {
+	animation: flip .2s .2s ease-out forwards reverse;
+}
+.pannel li:hover div.frontal {
+	animation: flip .2s ease-in forwards;
+}
+@keyframes flip {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(90deg);
+	}
+}
